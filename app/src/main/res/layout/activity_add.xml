@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:background="@drawable/activity_add_background"
+
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kişi Ekleme Sayfası"
+        android:textAlignment="center"
+        android:textSize="29sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/activity_add_bg"
+        android:orientation="vertical"
+
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <EditText
+            android:id="@+id/isimAddActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="İSİM"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/soyisimAddActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="SOYSİSİM"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/kartNoAddActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="TELEFON NUMARASI:"
+            android:inputType="phone"
+            android:textAlignment="center" />
+
+        <ImageButton
+            android:id="@+id/kaydetAddActivityDb"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/add_activity_button_db_background"
+            android:contentDescription="Add Button"
+            android:onClick="kaydetButonClick"
+            android:src="@drawable/baseline_add_button" />
+
+        <ImageView
+            android:id="@+id/silAddActivity"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add_activity_button_db_background"
+            android:contentDescription="Kişiyi Silmek İçin Tıklayınız"
+            android:onClick="deleteButonClick"
+            android:src="@drawable/baseline_delete_button"
+
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
